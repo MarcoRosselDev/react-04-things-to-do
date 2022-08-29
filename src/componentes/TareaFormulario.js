@@ -18,9 +18,11 @@ function TareaFormulario(props) {
     // esto garantiza que el id sera unico
     const tareaNueva = {
       id: uuidv4(),
-      text: input,
+      texto: input,
       completada: false
     }
+    
+    props.onSubmit(tareaNueva);
   }
 
   return (
