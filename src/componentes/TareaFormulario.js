@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import '../hojas-de-estilos/TareaFormulario.css'
+import '../hojas-de-estilos/TareaFormulario.css';
+import {v4 as uuidv4 } from 'uuid';
 
 function TareaFormulario(props) {
 
@@ -12,8 +13,11 @@ function TareaFormulario(props) {
   const manejarEnvio = e => {
     e.preventDefault(); // previene que no recarge la pj al enviar
     
+    // npm install uuid
+    // es un manejador de ids
+    // esto garantiza que el id sera unico
     const tareaNueva = {
-      id: '12311',
+      id: uuidv4(),
       text: input,
       completada: false
     }
