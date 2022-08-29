@@ -7,18 +7,22 @@ function TareaFormulario(props) {
 
   const manejarCambio = e => {
     setInput(e.target.value);
-    console.log(e.target.value);
   }
 
   const manejarEnvio = e => {
+    e.preventDefault(); // previene que no recarge la pj al enviar
+    
     const tareaNueva = {
       id: '12311',
-      text: 'Hola'
+      text: input,
+      completada: false
     }
   }
 
   return (
-    <form className='tarea-formulario'>
+    <form 
+    className='tarea-formulario'
+    onSubmit={manejarEnvio} >
       <input
         className="tarea-input"
         type='texto'
