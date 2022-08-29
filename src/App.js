@@ -8,7 +8,8 @@ function App() {
       <Logofreecodecamp />
       <div className='tareas-lista-principal'>
         <h1>Mis Tareas</h1>
-        <Tarea />
+        <Tarea 
+          texto='Aprender React'/>
       </div>
     </div>
   );
