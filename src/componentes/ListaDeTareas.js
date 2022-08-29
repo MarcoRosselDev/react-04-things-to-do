@@ -15,6 +15,11 @@ function ListaDeTareas() {
     }
   }
 
+  const eliminarTarea = id => {
+    const tareasActualizadas = tareas.filter(tarea => tarea.id !== id);
+    setTareas(tareasActualizadas);
+  }
+
 
   return(
     <>
@@ -26,7 +31,8 @@ function ListaDeTareas() {
               key={tarea.id}
               id={tarea.id}
               texto={tarea.texto}
-              completada={tarea.completada} />
+              completada={tarea.completada} 
+              eliminarTarea={eliminarTarea} />
           )
         }
       </div>
